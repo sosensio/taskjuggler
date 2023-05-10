@@ -190,7 +190,7 @@ task tmobF "Mobile Front End" {
     purge chargeset
     chargeset mDepl
     responsible jorge
-    depends WMGame.tback.tbackDev
+    depends WMGame.tgdesign
     task tA "Decision cloud" {
       effort 2d
       allocate jorge
