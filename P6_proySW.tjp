@@ -172,11 +172,10 @@ task tmobF "Mobile Front End" {
     depends WMGame.tback.tBEd
     task tGUId "Mobile GUI Design" {
       effort 9d
-      actual:effort 15d
       allocate jorge
     }
     task tMFEc "Mobile Front End Construction" {
-      effort 15d
+      effort 7d
       allocate jorge
       depends WMGame.tmobF.tGUId
     }
