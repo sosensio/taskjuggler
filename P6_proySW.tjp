@@ -187,27 +187,6 @@ task tmobF "Mobile Front End" {
     }    
   }
 
-  task tCloud "Cloud deployment" {
-    purge chargeset
-    chargeset mDepl
-    responsible jorge
-    depends WMGame.tback.tbackDev
-    depends WMGame.twebF.tbackDev
-    depends WMGame.tmobF.tMFEt
-    task tA "A" {
-      effort 9d
-      actual:effort 15d
-      allocate jorge
-    }
-    task tB "Mobile Front End Construction" {
-      effort 15d
-      allocate jorge
-    }
-    task tC "Web Front End Test" {
-      effort 6d
-      allocate dev1
-    }    
-  }
 
   task deliveries "Milestones" {
 
