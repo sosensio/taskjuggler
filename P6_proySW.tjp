@@ -191,19 +191,18 @@ task tmobF "Mobile Front End" {
     chargeset mDepl
     responsible jorge
     depends WMGame.tback.tbackDev
-    depends WMGame.tmobF.tMFEt
-    depends WMGame.tmobF.tFEt
+
     task tA "A" {
       effort 1d
       allocate jorge
     }
-    task tB "Mobile Front End Construction" {
+    task tB "B" {
       effort 1d
       allocate jorge
     }
-    task tC "Web Front End Test" {
+    task tC "C" {
       effort 1d
-      allocate dev1
+      allocate jorge
     }    
   }
 
