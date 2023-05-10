@@ -196,7 +196,7 @@ task tmobF "Mobile Front End" {
       allocate jorge
     }
     task tB "Despliegue sobre el cloud" {
-      effort 1d
+      effort 3d
       allocate jorge
     }  
   }
