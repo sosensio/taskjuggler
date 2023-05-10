@@ -46,6 +46,7 @@ account cost "Project Cost" {
   account manag "Management"
   account wFront "Web Front-End"
   account back "Back-End"
+  account mFront "Mobile Front-End"
 }
 account rev "Payments"
 # The Profit&Loss analysis should be rev - cost accounts.
@@ -163,6 +164,11 @@ task WMGame "Web & Mobile Game" {
       depends WMGame.tback
   }
 
+  task tfmobile "Desarrollo frontend mov" {
+    purge chargeset
+    chargeset mFront
+    responsible jorge
+  }
     
   task deliveries "Milestones" {
 
