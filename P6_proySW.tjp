@@ -159,6 +159,7 @@ task WMGame "Web & Mobile Game" {
 
   task ttest "Accpetance tests" {
       effort 10d
+      start 2023-07-01
       allocate boss
       allocate dev2
       actual:effort 15d
