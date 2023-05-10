@@ -19,7 +19,7 @@ project pSix "Web Game"  2023-03-15 +2.5m {
   # the project reports. If not specified, the current day will be
   # used, but this will likely be outside of the project range, so it
   # can't be seen in the reports.
-  now 2023-04-15-13:00
+  now 2023-05-10-11:00
   # The currency for all money values is the US Dollar.
   currency "EUR"
 
@@ -71,6 +71,7 @@ resource dev3 "Peter Green" {
 }
 resource jorge "Jorge Senso" {
   email "819910@unizar.es"
+  shift 4
 }
 
 # Now we specify the work packages. The whole project is described as
