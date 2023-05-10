@@ -149,6 +149,11 @@ task WMGame "Web & Mobile Game" {
       effort 6d
       allocate dev1
       depends WMGame.twebF.tFEc
+      journalentry 2023-03-28 "Game logic completed before deadline" {
+        author jorge
+        alert green
+        summary "Probando..."
+      }
     }    
   }
 
