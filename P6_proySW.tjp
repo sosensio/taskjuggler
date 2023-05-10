@@ -47,6 +47,7 @@ account cost "Project Cost" {
   account wFront "Web Front-End"
   account back "Back-End"
   account mFront "Mobile Front-End"
+  account mDepl "Deployment"
 }
 account rev "Payments"
 # The Profit&Loss analysis should be rev - cost accounts.
@@ -173,11 +174,30 @@ task tmobF "Mobile Front End" {
       effort 9d
       actual:effort 15d
       allocate jorge
-      journalentry 2023-04-11 "Problems with the GUI design tool" {
-        author dev3
-        alert yellow
-        summary "The tool used for the GUI design has given me a lot of problems. I recommend to look for other one."
-      }
+    }
+    task tMFEc "Mobile Front End Construction" {
+      effort 15d
+      allocate jorge
+      depends WMGame.tmobF.tGUId
+    }
+    task tMFEt "Web Front End Test" {
+      effort 6d
+      allocate dev1
+      depends WMGame.tmobF.tMFEc
+    }    
+  }
+
+  task tCloud "Cloud deployment " {
+    purge chargeset
+    chargeset mDepl
+    responsible jorge
+    depends WMGame.tback.tbackDev
+    depends WMGame.twebF.tbackDev
+    depends WMGame.tmobF.tMFEt
+    task tGUId "A" {
+      effort 9d
+      actual:effort 15d
+      allocate jorge
     }
     task tMFEc "Mobile Front End Construction" {
       effort 15d
