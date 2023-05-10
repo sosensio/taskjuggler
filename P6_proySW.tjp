@@ -191,19 +191,16 @@ task tmobF "Mobile Front End" {
     chargeset mDepl
     responsible jorge
     depends WMGame.tback.tbackDev
-
-    task tA "A" {
-      effort 1d
+    depends WMGame.tmobF.tMFEt
+    depends WMGame.tmobF.tFEt
+    task tA "Decision cloud" {
+      effort 2d
       allocate jorge
     }
-    task tB "B" {
-      effort 1d
+    task tB "Despliegue sobre el cloud" {
+      effort 2d
       allocate jorge
-    }
-    task tC "C" {
-      effort 1d
-      allocate jorge
-    }    
+    }  
   }
 
   task deliveries "Milestones" {
