@@ -168,11 +168,11 @@ task WMGame "Web & Mobile Game" {
 task tmobF "Mobile Front End" {
     purge chargeset
     chargeset mFront
-    responsible jorge
+    responsible dev2
     depends WMGame.tback.tBEd
     task tGUId "Mobile GUI Design" {
       effort 9d
-      allocate jorge
+      allocate dev2
     }
     task tMFEc "Mobile Front End Construction" {
       effort 7d
@@ -195,11 +195,11 @@ task tmobF "Mobile Front End" {
     depends WMGame.tmobF.tFEt
     task tA "Decision cloud" {
       effort 2d
-      allocate jorge
+      allocate jorge, dev1
     }
     task tB "Despliegue sobre el cloud" {
       effort 2d
-      allocate jorge
+      allocate dev2
     }  
   }
 
