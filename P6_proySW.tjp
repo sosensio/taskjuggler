@@ -191,8 +191,6 @@ task tmobF "Mobile Front End" {
     chargeset mDepl
     responsible jorge
     depends WMGame.tback.tbackDev
-    depends WMGame.tmobF.tMFEt
-    depends WMGame.tmobF.tFEt
     task tA "Decision cloud" {
       effort 2d
       allocate jorge, dev1
