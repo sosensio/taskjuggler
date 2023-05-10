@@ -179,9 +179,9 @@ task tmobF "Mobile Front End" {
         summary "The tool used for the GUI design has given me a lot of problems. I recommend to look for other one."
       }
     }
-    task tMFEc "Web Front End Construction" {
+    task tMFEc "Mobile Front End Construction" {
       effort 15d
-      allocate dev2, dev3
+      allocate jorge
       depends WMGame.tmobF.tGUId
     }
     task tMFEt "Web Front End Test" {
